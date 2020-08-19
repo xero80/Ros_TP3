@@ -30,7 +30,7 @@ The robot hand moves its fingers according to the joint values assigned
 - Terminal #1 - launch the demo to display the hand robot in RViz
 
 ```
-roslaunch udm_hand_moveitconfig demo.launch
+roslaunch udm_hand_moveit_config demo.launch
 ```
 
 - Terminal #2 - Run the python file with rosrun
@@ -70,7 +70,7 @@ The robot hands plans a path to the pose goal assigned
 - Terminal #1 - launch the demo to display the hand robot in RViz
 
 ```
-roslaunch udm_hand_moveitconfig demo.launch
+roslaunch udm_hand_moveit_config demo.launch
 ```
 
 - Terminal #2 - Run the python file with rosrun
