@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="cine_d_launch" pkg="udm_hand_control" type="cine_d_launch.py" respawn="false" output="screen">
+  </node>
+
+</launch>

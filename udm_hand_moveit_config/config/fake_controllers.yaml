@@ -1,0 +1,36 @@
+controller_list:
+  - name: fake_first_finger_controller
+    joints:
+      - base_to_first_finger_01
+      - first_finger_01_to_02
+      - first_finger_02_to_03
+  - name: fake_second_finger_controller
+    joints:
+      - base_to_second_finger_01
+      - second_finger_01_to_02
+      - second_finger_02_to_03
+  - name: fake_fourth_finger_controller
+    joints:
+      - base_to_fourth_finger_01
+      - fourth_finger_01_to_02
+      - fourth_finger_02_to_03
+  - name: fake_thumb_controller
+    joints:
+      - base_to_thumb_01
+      - thumb_01_to_02
+  - name: fake_third_finger_controller
+    joints:
+      - base_to_third_finger_01
+      - third_finger_01_to_02
+      - third_finger_02_to_03
+initial:  # Define initial robot poses.
+  - group: first_finger
+    pose: first_pose
+  - group: second_finger
+    pose: second_pose
+  - group: fourth_finger
+    pose: fourth_pose
+  - group: thumb
+    pose: fifth_pose
+  - group: third_finger
+    pose: third pose

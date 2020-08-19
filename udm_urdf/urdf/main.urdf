@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<robot name="hand">
+
+<!-- Material colors -->
+<material name="blue">
+    <color rgba="0 0 0.8 1"/>
+</material>
+<material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+</material>
+<material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+</material>
+
+<!--The palm -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.6 0.3 0.8"/>
+      </geometry>
+    </visual>
+  </link>
+
+<!-- First Finger -->
+  <link name="first_finger_01">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+     <material name="blue"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_first_finger_01" type="fixed">
+    <parent link="base_link"/>
+    <child link="first_finger_01"/>
+    <origin xyz="-0.25 0 0.4"/>
+  </joint>
+
+  <link name="first_finger_02">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="grey"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="first_finger_01_to_02" type="fixed">
+    <parent link="first_finger_01"/>
+    <child link="first_finger_02"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+ 
+  <link name="first_finger_03">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="first_finger_02_to_03" type="fixed">
+    <parent link="first_finger_02"/>
+    <child link="first_finger_03"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="head_01">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    </visual>
+  </link>
+
+  <joint name="head_connect_01" type="fixed">
+    <parent link="first_finger_03"/>
+    <child link="head_01"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+<!-- Second Finger -->
+  <link name="second_finger_01">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="blue"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_second_finger_01" type="fixed">
+    <parent link="base_link"/>
+    <child link="second_finger_01"/>
+    <origin xyz="-0.09 0 0.4"/>
+  </joint>
+
+  <link name="second_finger_02">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="grey"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="second_finger_01_to_02" type="fixed">
+    <parent link="second_finger_01"/>
+    <child link="second_finger_02"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="second_finger_03">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="second_finger_02_to_03" type="fixed">
+    <parent link="second_finger_02"/>
+    <child link="second_finger_03"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="head_02">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    </visual>
+  </link>
+  <joint name="head_connect_02" type="fixed">
+    <parent link="second_finger_03"/>
+    <child link="head_02"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+<!-- Third Finger -->
+  <link name="third_finger_01">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="blue"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_third_finger_01" type="fixed">
+    <parent link="base_link"/>
+    <child link="third_finger_01"/>
+    <origin xyz="0.07 0 0.4"/>
+  </joint>
+
+  <link name="third_finger_02">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="grey"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="third_finger_01_to_02" type="fixed">
+    <parent link="third_finger_01"/>
+    <child link="third_finger_02"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="third_finger_03">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="third_finger_02_to_03" type="fixed">
+    <parent link="third_finger_02"/>
+    <child link="third_finger_03"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="head_03">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    </visual>
+  </link>
+  <joint name="head_connect_03" type="fixed">
+    <parent link="third_finger_03"/>
+    <child link="head_03"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+<!-- Fourth Finger -->
+  <link name="fourth_finger_01">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="blue"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_fourth_finger_01" type="fixed">
+    <parent link="base_link"/>
+    <child link="fourth_finger_01"/>
+    <origin xyz="0.23 0 0.4"/>
+  </joint>
+
+  <link name="fourth_finger_02">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="grey"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="fourth_finger_01_to_02" type="fixed">
+    <parent link="fourth_finger_01"/>
+    <child link="fourth_finger_02"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="fourth_finger_03">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    <origin rpy="0 0 0" xyz="0 0.0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="fourth_finger_02_to_03" type="fixed">
+    <parent link="fourth_finger_02"/>
+    <child link="fourth_finger_03"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+  <link name="head_04">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    </visual>
+  </link>
+  <joint name="head_connect_04" type="fixed">
+    <parent link="fourth_finger_03"/>
+    <child link="head_04"/>
+    <origin xyz="0 0 0.2"/>
+  </joint>
+
+<!-- thumb -->
+  <link name="thumb_01">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="blue"/>
+    <origin rpy="0.1 0.9 0" xyz="0.1 0 0.1"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_thumb_01" type="fixed">
+    <parent link="base_link"/>
+    <child link="thumb_01"/>
+    <origin rpy="0 0 0" xyz="0.3 0.0 -0.1"/>
+  </joint>
+
+  <link name="thumb_02">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    <origin rpy="0.2 1 0" xyz="0.1 0 0.05"/>
+    </visual>
+  </link>
+
+  <joint name="thumb_01_to_02" type="fixed">
+    <parent link="thumb_01"/>
+    <child link="thumb_02"/>
+    <origin rpy="0 0 0" xyz="0.15 0.0 0.15"/>
+  </joint>
+
+  <link name="head_05">
+    <visual>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    <material name="green"/>
+    </visual>
+  </link>
+  <joint name="head_connect_05" type="fixed">
+    <parent link="thumb_02"/>
+    <child link="head_05"/>
+    <origin rpy="0.2 1 0" xyz="0.2 0 0.1"/>
+  </joint>
+</robot>
