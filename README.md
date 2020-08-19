@@ -13,7 +13,7 @@ cd ..
 source devel/setup.bash
 ```
 
-# urdf
+# udm_urdf
 
 Contains the hand model 
 
