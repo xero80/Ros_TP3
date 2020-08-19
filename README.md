@@ -21,7 +21,7 @@ Contains the hand model
 
 Makes use of the MoveIt Setup Assistant to configure the hand robot with MoveIt
 
-#udm_hand_control
+# udm_hand_control
 
 ## (b) Cinematique directe
 
