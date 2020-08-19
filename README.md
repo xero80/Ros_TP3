@@ -43,11 +43,11 @@ rosrun udm_hand_control cine_move_d.py
 
 ```
 rosservice call /udm_service "joint_goal1:
-  data: 1.0
+  data: 0.3
 joint_goal2:
-  data: 0.0
+  data: 0.2
 joint_goal3:
-  data: 0.0
+  data: 0.1
 group:
   data: 'first_finger'"
 ```
