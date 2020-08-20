@@ -62,6 +62,17 @@ joint_goal2:
 group:
   data: 'thumb'"
 ```
+# Launch 
+
+Launchfile for cinematique directe (for all fingers)
+
+- cine_direct.launch
+
+## View in Rviz 
+
+```
+roslaunch udm_hand_control cine_direct.launch
+```
 
 ## (c) Cinematique inverse
 
@@ -96,12 +107,12 @@ group:
 
 # Launch 
 
-Launchfile for cinematique directe
+Launchfile for cinematique inverse
 
-- cine_direct.launch
+- cine_inv.launch
 
 ## View in Rviz 
 
 ```
-roslaunch udm_hand_control cine_direct.launch
+roslaunch udm_hand_control cine_inv.launch
 ```
