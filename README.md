@@ -23,6 +23,7 @@ Makes use of the MoveIt Setup Assistant to configure the hand robot with MoveIt
 
 # udm_hand_control
 
+
 ## (b) Cinematique directe
 
 The robot hand moves its fingers according to the joint values assigned 
@@ -73,6 +74,7 @@ Launchfile for cinematique directe (for all fingers)
 ```
 roslaunch udm_hand_control cine_direct.launch
 ```
+
 
 ## (c) Cinematique inverse
 
